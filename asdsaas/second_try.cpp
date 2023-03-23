@@ -23,6 +23,7 @@ namespace senond_try
 	}
 	string surchData(vector<vector<int>> vec, int value, int surchValue)
 	{
+		int i = 0;
 		int sizeOfVec = vec.size();
 		if (sizeOfVec % 2 == 1) { 
 			
