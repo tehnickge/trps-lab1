@@ -24,7 +24,10 @@ namespace senond_try
 	string surchData(vector<vector<int>> vec, int value, int surchValue)
 	{
 		int sizeOfVec = vec.size();
-		if (sizeOfVec % 2 == 1) { sizeOfVec++; }
+		if (sizeOfVec % 2 == 1) { 
+			
+		}
+		else { sizeOfVec--; }
 		return "aboba";
 	}
 }
