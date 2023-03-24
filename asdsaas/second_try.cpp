@@ -4,7 +4,7 @@
 #include "NavigateInTable.h"
 
 
-namespace senond_try
+namespace secnond_try
 {
 	vector<vector<int>> generateVectorWithData(int k)
 	{
@@ -24,10 +24,27 @@ namespace senond_try
 	string surchData(vector<vector<int>> vec, int value, int surchValue)
 	{
 		int sizeOfVec = vec.size();
-		if (sizeOfVec % 2 == 1) { 
-			
+		if (sizeOfVec % 2 == 1) {
+
 		}
 		else { sizeOfVec--; }
 		return "aboba";
+	}
+
+	vector<vector<int>> boubleSort(vector<vector<int>> vec, int posCount)
+	{
+		for (int i = 0; i < vec.size(); i++) 
+		{
+			for (int j = 0; j < vec.size() - 1; j++)
+			{
+				if (vec[j][posCount] > vec[j + 1][posCount])
+				{
+					int b = vec[j][posCount]; // создали дополнительную переменную
+					vec[j][posCount] = vec[j + 1][posCount]; // меняем местами
+					vec[j + 1][posCount] = b; // значения элементов
+				}
+			}
+		}
+		return vec;
 	}
 }

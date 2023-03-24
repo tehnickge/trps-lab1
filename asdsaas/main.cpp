@@ -1,6 +1,7 @@
 ﻿#include "includes.h"
 #include "NavigateInTable.h"
 #include "first_try.h"
+#include "second_try.h"
 
 
 using namespace std;
@@ -45,6 +46,21 @@ int main()
         }
         cout << endl;
     }
+
+    vector<vector<int>> vectorina = secnond_try::generateVectorWithData();
+
+    vectorina = secnond_try::boubleSort(vectorina, DATE_POST);
+    cout << "__________THIS IS SECOND______" << endl << endl << endl;
+    for (const vector<int>& arr : vectorina)
+    {
+        for (const int& element : arr)
+        {
+            cout << setw(5) << element << "";
+        }
+        cout << endl;
+    }
+
+    
     return 0;
 }
 
