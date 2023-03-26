@@ -85,10 +85,9 @@ int main()
     cout << endl << endl << "_______________________________________" << endl;
 
     cout << setw(50) << "SORT vec" << endl;
-    start_time = clock();
-    vectorina = secnond_try::boubleSort(vectorina, DATE_POST);
-    end_time = clock();
-    work_time = ((end_time - start_time) / 1000.0);
+    vector<int> temp;
+
+   
     cout << "work_time " << work_time << endl;
     //for (const vector<int>& arr : vectorina)
     //{

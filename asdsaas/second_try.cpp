@@ -34,21 +34,30 @@ namespace secnond_try
 		}
 	}
 
-	vector<vector<int>> boubleSort(vector<vector<int>> vec, int posCount)
+	vector<int> boubleSort(vector<vector<int>> vec, int posCount) 
 	{
-		for (int i = 0; i < vec.size(); i++) 
+		vector<int> res;
+		for (int i = 0; i < vec.size(); i++)
 		{
-			for (int j = 0; j < vec.size() - 1; j++)
+			res.push_back(vec[i][posCount]);
+		}
+		int start_time = clock();
+		for (int i = 0; i < res.size(); i++)
+		{
+			for (int j = 0; j < res.size() - 1; j++)
 			{
-				if (vec[j][posCount] > vec[j + 1][posCount])
+				if (res[j] > res[j + 1])
 				{
-					int b = vec[j][posCount]; // создали дополнительную переменную
-					vec[j][posCount] = vec[j + 1][posCount]; // меняем местами
-					vec[j + 1][posCount] = b; // значения элементов
+					int b = res[j]; // создали дополнительную переменную
+					res[j] = res[j + 1]; // меняем местами
+					res[j + 1] = b; // значения элементов
 				}
 			}
 		}
-		return vec;
+		int end_time = clock();
+		double work_time = (end_time - start_time) / 1000.0;
+		cout << "work time: " << work_time << endl;
+		return res;
 	}
 
 	vector<vector<int>> deleteElement(vector<vector<int>> vec, int row, int col)
