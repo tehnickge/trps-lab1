@@ -21,14 +21,16 @@ namespace secnond_try
 		}
 		return vec;
 	}
-	string surchData(vector<vector<int>> vec, int value, int surchValue)
+	string surchData(vector<vector<int>> vec, int colValue, int surchValue)
 	{
-		int sizeOfVec = vec.size();
-		if (sizeOfVec % 2 == 1) {
-
+		string res;
+		for (int i = 0; i < vec.size(); i++)	// 
+		{
+				if(vec[i][colValue] == surchValue) // если искомое значение равно тикущему выход
+				(res = to_string(vec[i][colValue]));
+				break;
 		}
-		else { sizeOfVec--; }
-		return "aboba";
+		return res;
 	}
 
 	vector<vector<int>> boubleSort(vector<vector<int>> vec, int posCount)
@@ -43,6 +45,34 @@ namespace secnond_try
 					vec[j][posCount] = vec[j + 1][posCount]; // меняем местами
 					vec[j + 1][posCount] = b; // значения элементов
 				}
+			}
+		}
+		return vec;
+	}
+
+	vector<vector<int>> deleteElement(vector<vector<int>> vec, int row, int col)
+	{
+		if ((row > vec.size() || row < 0) || (col > vec[0].size() || col < 0 ))
+		{
+			cout << setw(5) << "incorrect value" << endl;
+		}
+		else
+		{
+			vec[row][col] == NULL;
+		}
+		return vec;
+	}
+	vector<vector<int>> deleteElement(vector<vector<int>> vec, int row)
+	{
+		if ((row > vec.size() || row < 0))
+		{
+			cout << setw(5) << "incorrect value" << endl;
+		}
+		else
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				vec[row][i] = NULL;
 			}
 		}
 		return vec;

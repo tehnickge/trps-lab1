@@ -8,18 +8,12 @@ using namespace std;
 // Задача 1. Даны N записей вида: код материала, дата поступления,
 // номер склада, количество, сумма. 
 
-
-
-
-
-
-
 int main()
 {
     srand((unsigned)time(0));
-    vector<vector<int>> vec = first_try::generateVectorWithData();
+    vector<vector<int>> vec = first_try::generateVectorWithData(); // field the vector (df value 25)
 
-    for (const vector<int>& arr : vec)
+    for (const vector<int>& arr : vec)      // print vector
     {
         for (const int& element : arr)
         {
@@ -30,13 +24,14 @@ int main()
 
     cout << endl << endl << "_______________________________________" << endl;
 
-    vector<int> sortVec = first_try::TetragonSort(vec, STOCK_NUMBER);
-    for (int element : sortVec)
+    vector<int> sortVec = first_try::TetragonSort(vec, STOCK_NUMBER); // sort
+
+    for (int element : sortVec) // print
     {
         cout << element << endl;
     }
    
-    vec = first_try::deleteElement(vec, 3);
+    vec = first_try::deleteElement(vec, 3); // delete
 
     for (const vector<int>& arr : vec)
     {
@@ -60,7 +55,6 @@ int main()
         cout << endl;
     }
 
-    
     return 0;
 }
 

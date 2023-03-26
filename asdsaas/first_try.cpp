@@ -172,5 +172,13 @@ namespace first_try
 		auto iter = vec.cbegin();
 		vec.erase(iter + index);
 		return vec;
+
+		/* erase
+		 _CONSTEXPR20 iterator erase(const_iterator _Where) noexcept(
+		is_nothrow_move_assignable_v<value_type>)  strengthened  {
+			const pointer _Whereptr = _Where._Ptr;
+			auto& _My_data = _Mypair._Myval2;
+			pointer& _Mylast = _My_data._Mylast; 
+		*/
 	}
 }
