@@ -15,7 +15,7 @@ namespace secnond_try
 			temp.clear();
 			for (int j = 0; j < 5; j++)
 			{
-				temp.push_back((rand() % 100) + 1);
+				temp.push_back((rand() % 12) + 1);
 			}
 			vec.push_back(temp);
 		}
@@ -24,13 +24,14 @@ namespace secnond_try
 	string surchData(vector<vector<int>> vec, int colValue, int surchValue)
 	{
 		string res;
-		for (int i = 0; i < vec.size(); i++)	// 
+		for (int i = 0; i < vec.size(); i++)	// если искомое значение равно тикущему выход
 		{
-				if(vec[i][colValue] == surchValue) // если искомое значение равно тикущему выход
+			if (vec[i][colValue] == surchValue) 
+			{
 				(res = to_string(vec[i][colValue]));
-				break;
+				return res;
+			} 		
 		}
-		return res;
 	}
 
 	vector<vector<int>> boubleSort(vector<vector<int>> vec, int posCount)

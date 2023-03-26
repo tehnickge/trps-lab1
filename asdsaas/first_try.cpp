@@ -14,7 +14,7 @@ namespace first_try
 			temp.clear();
 			for (int j = 0; j < 5; j++)
 			{
-				temp.push_back((rand() % 100) + 1);
+				temp.push_back((rand() % 12) + 1);
 			}
 			vec.push_back(temp);
 		}
